@@ -100,6 +100,7 @@ print(check_divisuion_v2(1, 50))
 def fibonacci_sequence(zero_step, first_step, border):
     """ Определение последовательности Фибоначчи 
     с определенного элемента
+
     :param zero_step: начальный элемент последовательности
     :param first_step: следующий элемент последовательности
     :param border: граница проверяемых элементов
@@ -123,8 +124,7 @@ for new_list_el in new_list:
     if new_list_el % 2 == 0: # проверка  элементов на четность
         even_list.append(new_list_el)
     
-
-
+#Вывод результатов для теста 
 print(len(new_list)) # Количество элементов в последовательности;
 print(sum(even_list)) # Сумму всех четных элементов;
 print(even_list) # Все четные элементы
