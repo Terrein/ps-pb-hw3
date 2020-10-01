@@ -90,6 +90,7 @@ def check_divisuion_v2(min, max):
         members_sum += members
     return(members_sum)
 
+
 # Тест вывода работы функции
 print(check_divisuion_v2(1, 50))
 
@@ -97,10 +98,10 @@ print(check_divisuion_v2(1, 50))
 Последовательность Фибоначчи - это числовой ряд в котором каждое следующее число равно сумме двух предыдущих.
 Например, последовательность для первых 10 чисел, начиная с 1 выглядит так :1, 1, 2, 3, 5, 8, 13, 21, 34, 55 """
 
+
 def fibonacci_sequence(zero_step, first_step, border):
     """ Определение последовательности Фибоначчи 
     с определенного элемента
-
     :param zero_step: начальный элемент последовательности
     :param first_step: следующий элемент последовательности
     :param border: граница проверяемых элементов
@@ -115,18 +116,19 @@ def fibonacci_sequence(zero_step, first_step, border):
             list_value.append(next_step)
     return(list_value)
 
+
 # Создаем новый лист и передаем в него результат функции
 new_list = fibonacci_sequence(1, 1, 10000000)
 print(new_list)
 # Лист для четных элементов последовательности
-even_list = [] 
+even_list = []
 for new_list_el in new_list:
-    if new_list_el % 2 == 0: # проверка  элементов на четность
+    if new_list_el % 2 == 0:  # проверка  элементов на четность
         even_list.append(new_list_el)
-    
-#Вывод результатов для теста 
-print(len(new_list)) # Количество элементов в последовательности;
-print(sum(even_list)) # Сумму всех четных элементов;
-print(even_list) # Все четные элементы
-print(len(even_list)) # Количество четных элементов в последовательности
-print(new_list[-2]) # Предпоследнее число последовательности
+
+# Вывод результатов для теста
+print(len(new_list))  # Количество элементов в последовательности;
+print(sum(even_list))  # Сумму всех четных элементов;
+print(even_list)  # Все четные элементы
+print(len(even_list))  # Количество четных элементов в последовательности
+print(new_list[-2])  # Предпоследнее число последовательности
