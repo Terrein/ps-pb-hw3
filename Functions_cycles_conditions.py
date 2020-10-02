@@ -26,20 +26,21 @@ def plural_form(number, form_1, form_2, form_3):
     :param form_3: форма множественного числа от 5 объектов
     """
 
-    if int(str(number)[-1]) <= 0 or int(str(number)[-1]) >= 5:
+    if number % 100 in (11, 12, 13, 14):
         nessesary_form = form_3
-    elif int(str(number)[-1]) > 0 and int(str(number)[-1]) <= 1:
+    elif number % 10 == 1:
         nessesary_form = form_1
-    else:
-        int(str(number)[-1]) > 1 and int(str(number)[-1]) <= 4
+    elif number % 10 in (2, 3, 4):
         nessesary_form = form_2
+    else:
+        nessesary_form = form_3
     return(f'{number} { nessesary_form}')
 
 
 # Тест функции 1
-print(plural_form(50555, 'яблоко', 'яблока', 'яблок'))
+print(plural_form(11, 'яблоко', 'яблока', 'яблок'))
 # Тест функции 2
-print(plural_form(50555, 'Студент', 'Студента', 'Студентов'))
+print(plural_form(551, 'Студент', 'Студента', 'Студентов'))
 
 
 """ Задача #2: FizzBuzz
